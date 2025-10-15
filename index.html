@@ -1,0 +1,104 @@
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — 3 Interesting Things</title>
+  <style>
+    :root { --maxw: 900px; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;      /* Centers the whole page content */
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background: #f7f7fb;
+    }
+    .page {
+      width: min(100% - 2rem, var(--maxw));
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      text-align: center;       /* Centers text inside the page */
+    }
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: clamp(1.5rem, 2.5vw + .5rem, 2.25rem);
+    }
+    p.lead {
+      margin: 0 auto 2rem;
+      max-width: 60ch;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    figure {
+      margin: 0;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fafafa;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    figcaption {
+      padding: .75rem 1rem;
+      font-weight: 600;
+    }
+    .small {
+      display: block;
+      font-weight: 400;
+      color: #555;
+      margin-top: .25rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <h1>Three Interesting Things About Me</h1>
+    <p class="lead">
+      Hi! I’m <strong>Ernesto Zamora</strong>. Below are three quick images that show what I enjoy
+      and what makes me, me.
+    </p>
+
+    <section class="grid" aria-label="Three interesting things">
+      <figure>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F209bb4fe-cd27-47cc-b140-ea7e56208650.db563901b58043696e557d2c1375b649.jpeg&f=1&nofb=1&ipt=0973087f1fac04933c4ddc99c5c82a522952b42489d8e3c5d71e1b1aa8bf1a50" alt="Scenic landscape representing my love for travel." />
+        <figcaption>
+          Fav Food
+          <span class="small">I like apple sause a lot</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://duckduckgo.com/i/a4a7f0aec48b6d03.png" alt="Close-up of musical instruments symbolizing my music hobby." />
+        <figcaption>
+          My little pony
+          <span class="small">I like pinkie pie from my little pony friendship is magic.</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.PboAC6i7SS0MCX5mhaakzQHaEK%3Fcb%3D12%26pid%3DApi&f=1&ipt=86788e162d89d3d33ea9d0708ccde449c6b1d348bdd9d837c4423edbe7173534&ipo=images" alt="Laptop with code on screen representing my interest in coding." />
+        <figcaption>
+          Eeffoc Enthusiast
+          <span class="small">I need eeffoc/coffee to start the day because im a sigma male</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
